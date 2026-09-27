@@ -16,20 +16,20 @@ export default function CheckBoxGrupo({
 }: CheckBoxGrupoProps) {
   return (
     <fieldset className="flex flex-col gap-2">
-      <legend className="mb-1 font-medium text-gray-700">
+      <legend className="mb-1 text-sm font-medium text-ink">
         {titulo}
       </legend>
 
       {opcoes.map((opcao) => (
         <label
           key={opcao.valor}
-          className="flex cursor-pointer items-center gap-3 text-gray-700"
+          className="flex cursor-pointer items-center gap-3 text-ink"
         >
           <input
             type="checkbox"
             name={nome}
             value={opcao.valor}
-            className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+            className="h-4 w-4 rounded border-ink/20 accent-primary"
           />
 
           <span>{opcao.texto}</span>

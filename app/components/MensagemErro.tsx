@@ -1,12 +1,11 @@
 interface MensagemErroProps {
   mensagem: string;
+  id?: string;
 }
 
-export default function MensagemErro({
-  mensagem,
-}: MensagemErroProps) {
+export default function MensagemErro({ mensagem, id }: MensagemErroProps) {
   return (
-    <p role="alert" className="text-sm font-medium text-red-600">
+    <p id={id} role="alert" className="text-sm font-medium text-danger">
       {mensagem}
     </p>
   );

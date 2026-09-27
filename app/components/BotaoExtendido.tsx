@@ -1,20 +1,21 @@
 interface BotaoExtendidoProps {
   texto: string;
   tipo?: "button" | "submit" | "reset";
-  cor?: string;
+  /** Variante visual definida no design system (global.css): btn-primary | btn-secondary | btn-ghost */
+  cor?: "btn-primary" | "btn-secondary" | "btn-ghost";
   larguraTotal?: boolean;
 }
 
 export default function BotaoExtendido({
   texto,
   tipo = "button",
-  cor = "bg-blue-600 hover:bg-blue-700",
+  cor = "btn-primary",
   larguraTotal = true,
 }: BotaoExtendidoProps) {
   return (
     <button
       type={tipo}
-      className={`${larguraTotal ? "w-full" : ""} rounded-xl px-5 py-3 font-semibold text-white transition ${cor}`}
+      className={`btn ${cor} ${larguraTotal ? "w-full" : ""}`}
     >
       {texto}
     </button>

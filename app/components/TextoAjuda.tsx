@@ -5,5 +5,5 @@ interface TextoAjudaProps {
 export default function TextoAjuda({
   texto,
 }: TextoAjudaProps) {
-  return <p className="text-sm text-gray-500">{texto}</p>;
+  return <p className="text-sm text-ink/60">{texto}</p>;
 }

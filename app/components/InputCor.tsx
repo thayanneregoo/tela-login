@@ -7,11 +7,11 @@ interface InputCorProps {
 export default function InputCor({
   label,
   nome,
-  valorInicial = "#2563eb",
+  valorInicial = "#7c5cff",
 }: InputCorProps) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={nome} className="font-medium text-gray-700">
+      <label htmlFor={nome} className="text-sm font-medium text-ink">
         {label}
       </label>
 
@@ -20,7 +20,7 @@ export default function InputCor({
         name={nome}
         type="color"
         defaultValue={valorInicial}
-        className="h-12 w-20 cursor-pointer rounded-lg border border-gray-300 bg-white p-1"
+        className="h-12 w-20 cursor-pointer rounded-md border border-ink/15 bg-white p-1"
       />
     </div>
   );

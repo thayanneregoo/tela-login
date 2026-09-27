@@ -58,8 +58,8 @@ export default function FormularioCompletoExemplo() {
   ];
 
   return (
-    <form className="mx-auto flex max-w-3xl flex-col gap-6 rounded-2xl bg-white p-8 shadow-md">
-      <h1 className="text-3xl font-bold text-gray-900">
+    <form className="card mx-auto flex max-w-3xl flex-col gap-6">
+      <h1 className="text-3xl text-ink">
         Formulário completo
       </h1>
 
@@ -215,7 +215,7 @@ export default function FormularioCompletoExemplo() {
         <BotaoExtendido
           texto="Limpar"
           tipo="reset"
-          cor="bg-gray-500 hover:bg-gray-600"
+          cor="btn-secondary"
           larguraTotal={false}
         />
       </div>

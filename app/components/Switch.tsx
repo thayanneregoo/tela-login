@@ -23,7 +23,7 @@ export default function Switch({
         aria-checked={ativo}
         onClick={() => setAtivo((valorAtual) => !valorAtual)}
         className={`relative h-6 w-11 rounded-full transition ${
-          ativo ? "bg-blue-600" : "bg-gray-300"
+          ativo ? "bg-primary" : "bg-ink/15"
         }`}
       >
         <span
@@ -35,7 +35,7 @@ export default function Switch({
 
       <input type="hidden" name={nome} value={ativo ? "sim" : "nao"} />
 
-      <span className="text-gray-700">{label}</span>
+      <span className="text-ink">{label}</span>
     </label>
   );
 }

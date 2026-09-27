@@ -13,7 +13,7 @@ export default function InputArquivo({
 }: InputArquivoProps) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={nome} className="font-medium text-gray-700">
+      <label htmlFor={nome} className="text-sm font-medium text-ink">
         {label}
       </label>
 
@@ -23,7 +23,7 @@ export default function InputArquivo({
         type="file"
         accept={aceitar}
         required={obrigatorio}
-        className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-700 file:mr-4 file:rounded-md file:border-0 file:bg-blue-50 file:px-4 file:py-2 file:font-medium file:text-blue-700"
+        className="rounded-md border border-ink/15 bg-white px-3 py-2.5 text-sm text-ink file:mr-4 file:rounded-md file:border-0 file:bg-primary/10 file:px-4 file:py-2 file:font-semibold file:text-primary-strong"
       />
     </div>
   );

@@ -17,7 +17,7 @@ export default function InputRange({
 }: InputRangeProps) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={nome} className="font-medium text-gray-700">
+      <label htmlFor={nome} className="font-medium text-ink">
         {label}
       </label>
 
@@ -29,7 +29,7 @@ export default function InputRange({
         max={max}
         step={step}
         defaultValue={valorInicial}
-        className="w-full"
+        className="w-full accent-primary"
       />
     </div>
   );

@@ -5,7 +5,7 @@ interface CardTecnologiaProps {
   descricao: string;
   imagem: string;
   textoBotao: string;
-  corBotao?: string;
+  corBotao?: "btn-primary" | "btn-secondary" | "btn-ghost";
 }
 
 export default function CardTecnologia({
@@ -13,21 +13,21 @@ export default function CardTecnologia({
   descricao,
   imagem,
   textoBotao,
-  corBotao = "bg-blue-600 hover:bg-blue-700",
+  corBotao = "btn-primary",
 }: CardTecnologiaProps) {
   return (
-    <div className="flex h-full flex-col rounded-2xl bg-white p-5 shadow-md">
+    <div className="card flex h-full flex-col">
       <img
         src={imagem}
         alt={titulo}
-        className="mb-5 h-48 w-full rounded-xl object-cover"
+        className="mb-5 h-48 w-full rounded-lg object-cover"
       />
 
-      <h2 className="mb-2 text-2xl font-bold text-gray-900">
+      <h2 className="mb-2 text-2xl text-ink">
         {titulo}
       </h2>
 
-      <p className="mb-6 flex-1 text-gray-600">
+      <p className="mb-6 flex-1 text-ink/70">
         {descricao}
       </p>
 

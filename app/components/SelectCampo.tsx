@@ -1,3 +1,5 @@
+import MensagemErro from "./MensagemErro";
+
 interface OpcaoSelect {
   valor: string;
   texto: string;
@@ -9,6 +11,7 @@ interface SelectCampoProps {
   placeholder: string;
   opcoes: OpcaoSelect[];
   obrigatorio?: boolean;
+  erro?: string;
 }
 
 export default function SelectCampo({
@@ -17,10 +20,11 @@ export default function SelectCampo({
   placeholder,
   opcoes,
   obrigatorio = false,
+  erro,
 }: SelectCampoProps) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={nome} className="font-medium text-gray-700">
+      <label htmlFor={nome} className="font-medium text-ink">
         {label}
       </label>
 
@@ -29,7 +33,10 @@ export default function SelectCampo({
         name={nome}
         required={obrigatorio}
         defaultValue=""
-        className="rounded-lg border border-gray-300 bg-white px-4 py-2 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+        data-invalid={erro ? "true" : undefined}
+        aria-invalid={erro ? true : undefined}
+        aria-describedby={erro ? `${nome}-erro` : undefined}
+        className="field"
       >
         <option value="" disabled>
           {placeholder}
@@ -41,6 +48,8 @@ export default function SelectCampo({
           </option>
         ))}
       </select>
+
+      {erro && <MensagemErro id={`${nome}-erro`} mensagem={erro} />}
     </div>
   );
 }

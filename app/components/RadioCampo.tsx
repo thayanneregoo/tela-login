@@ -10,12 +10,12 @@ export default function RadioCampo({
   valor,
 }: RadioCampoProps) {
   return (
-    <label className="flex cursor-pointer items-center gap-3 text-gray-700">
+    <label className="flex cursor-pointer items-center gap-3 text-ink">
       <input
         type="radio"
         name={nome}
         value={valor}
-        className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500"
+        className="h-4 w-4 accent-primary"
       />
 
       <span>{label}</span>
